@@ -1610,12 +1610,63 @@ html&gt;body{padding:0}&lt;/style&gt;
     #infra-ndadi-interactive .proc-next h4{font-size:20px;margin:0 0 7px;color:#24303a}
     #infra-ndadi-interactive .proc-next p{margin:0;color:#66717c;font-size:14px;line-height:1.5}
     @media(max-width:760px){#infra-ndadi-interactive .proc-hero,#infra-ndadi-interactive .proc-steps{grid-template-columns:1fr}#infra-ndadi-interactive .proc-facts{grid-template-columns:1fr 1fr}}
+
+    /* Simulation visuelle de continuité de service */
+    #infra-ndadi-interactive .infra-sim-panel{margin:12px 0 16px;border:1px solid #dbe5ee;border-radius:12px;background:#f8fafc;padding:14px 16px;display:grid;grid-template-columns:minmax(220px,1.15fr) minmax(320px,1.85fr);gap:14px;align-items:center}
+    #infra-ndadi-interactive .infra-sim-copy{min-width:0}
+    #infra-ndadi-interactive .infra-sim-kicker{font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.08em;color:#6b7783;font-weight:750;margin-bottom:4px}
+    #infra-ndadi-interactive .infra-sim-title{font-size:17px;line-height:1.35;font-weight:750;color:#26313a;margin:0 0 4px}
+    #infra-ndadi-interactive .infra-sim-note{font-size:12px;line-height:1.45;color:#6b7783;margin:0 0 10px}
+    #infra-ndadi-interactive .infra-sim-actions{display:flex;flex-wrap:wrap;gap:8px}
+    #infra-ndadi-interactive .infra-sim-trigger{border-color:#cbd7e2;background:#fff;color:#26313a;font-weight:650}
+    #infra-ndadi-interactive .infra-sim-trigger[data-active=&quot;true&quot;]{border-color:#c73a35;background:#fff3f2;color:#a42d29}
+    #infra-ndadi-interactive .infra-sim-reset{display:none}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-sim-reset{display:inline-flex}
+    #infra-ndadi-interactive .infra-sim-status{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    #infra-ndadi-interactive .infra-sim-item{min-width:0;border:1px solid #e0e7ee;border-radius:9px;background:#fff;padding:9px 10px}
+    #infra-ndadi-interactive .infra-sim-label{display:block;font-size:11px;line-height:1.25;color:#78838e;margin-bottom:3px}
+    #infra-ndadi-interactive .infra-sim-value{display:flex;align-items:center;gap:7px;font-size:13px;line-height:1.35;font-weight:700;color:#27313a}
+    #infra-ndadi-interactive .infra-sim-dot{width:8px;height:8px;border-radius:50%;background:#2e9f59;flex:0 0 8px}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-sim-item[data-sim=&quot;ad01&quot;] .infra-sim-dot{background:#cc3b35}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-sim-item[data-sim=&quot;ad02&quot;] .infra-sim-dot{background:#2e9f59;box-shadow:0 0 0 3px #2e9f5918}
+    #infra-ndadi-interactive .infra-sim-live{grid-column:1/-1;margin-top:2px;padding:8px 10px;border-radius:8px;background:#eef6fd;color:#315b78;font-size:12px;line-height:1.4}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-sim-live{background:#eef8f1;color:#24633a}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp1&quot;]{opacity:.48}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp1&quot;] .infra-photo{filter:grayscale(1) contrast(.8)}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp1&quot;] .infra-photo-space{position:relative}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp1&quot;] .infra-photo-space::after{content:&quot;HS&quot;;position:absolute;top:6px;right:7px;display:flex;align-items:center;justify-content:center;min-width:34px;height:28px;padding:0 7px;border-radius:999px;background:#c83a35;color:#fff;font-size:12px;font-weight:800;letter-spacing:.04em;box-shadow:0 0 0 3px #fff}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp2&quot;] .infra-photo-space{position:relative}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp2&quot;] .infra-photo-space::after{content:&quot;SECOURS ACTIF&quot;;position:absolute;top:6px;right:2px;padding:6px 8px;border-radius:999px;background:#278a4f;color:#fff;font-size:10px;font-weight:800;letter-spacing:.035em;box-shadow:0 0 0 3px #fff;white-space:nowrap}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp2&quot;] .infra-photo{filter:drop-shadow(0 0 7px #2e9f5952)}
+    #infra-ndadi-interactive[data-sim-outage=&quot;true&quot;] .infra-device[data-equipment=&quot;hp2&quot;] .infra-device-role{color:#217442;font-weight:700}
+    @media (max-width:760px){#infra-ndadi-interactive .infra-sim-panel{grid-template-columns:1fr}#infra-ndadi-interactive .infra-sim-status{grid-template-columns:1fr 1fr}}
+    @media (max-width:480px){#infra-ndadi-interactive .infra-sim-status{grid-template-columns:1fr}}
+
   &lt;/style&gt;
 
   &lt;section class=&quot;infra-overview&quot; aria-label=&quot;Schéma interactif de l’infrastructure&quot;&gt;
     &lt;div class=&quot;infra-head&quot;&gt;
       &lt;h3&gt;Mon infrastructure&lt;/h3&gt;
       &lt;p class=&quot;infra-hint&quot;&gt;Cliquez sur un équipement pour ouvrir sa procédure.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;infra-sim-panel&quot; aria-label=&quot;Simulation visuelle de continuité de service&quot;&gt;
+      &lt;div class=&quot;infra-sim-copy&quot;&gt;
+        &lt;div class=&quot;infra-sim-kicker&quot;&gt;Démonstration soutenance&lt;/div&gt;
+        &lt;p class=&quot;infra-sim-title&quot;&gt;Simulation visuelle · perte de SRV-AD01&lt;/p&gt;
+        &lt;p class=&quot;infra-sim-note&quot;&gt;Illustration pédagogique uniquement : le site ne commande pas les serveurs réels.&lt;/p&gt;
+        &lt;div class=&quot;infra-sim-actions&quot;&gt;
+          &lt;button class=&quot;infra-action infra-sim-trigger&quot; type=&quot;button&quot; data-active=&quot;false&quot;&gt;Simuler la panne SRV-AD01&lt;/button&gt;
+          &lt;button class=&quot;infra-action infra-sim-reset&quot; type=&quot;button&quot;&gt;Rétablir SRV-AD01&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;infra-sim-status&quot; aria-live=&quot;polite&quot;&gt;
+        &lt;div class=&quot;infra-sim-item&quot; data-sim=&quot;ad01&quot;&gt;&lt;span class=&quot;infra-sim-label&quot;&gt;SRV-AD01&lt;/span&gt;&lt;span class=&quot;infra-sim-value&quot;&gt;&lt;span class=&quot;infra-sim-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;infra-sim-text&quot;&gt;Actif · AD / DNS / DHCP&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;infra-sim-item&quot; data-sim=&quot;ad02&quot;&gt;&lt;span class=&quot;infra-sim-label&quot;&gt;SRV-AD02&lt;/span&gt;&lt;span class=&quot;infra-sim-value&quot;&gt;&lt;span class=&quot;infra-sim-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;infra-sim-text&quot;&gt;Disponible en secours&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;infra-sim-item&quot; data-sim=&quot;dns&quot;&gt;&lt;span class=&quot;infra-sim-label&quot;&gt;DNS&lt;/span&gt;&lt;span class=&quot;infra-sim-value&quot;&gt;&lt;span class=&quot;infra-sim-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;infra-sim-text&quot;&gt;Disponible&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;infra-sim-item&quot; data-sim=&quot;dhcp&quot;&gt;&lt;span class=&quot;infra-sim-label&quot;&gt;DHCP&lt;/span&gt;&lt;span class=&quot;infra-sim-value&quot;&gt;&lt;span class=&quot;infra-sim-dot&quot;&gt;&lt;/span&gt;&lt;span class=&quot;infra-sim-text&quot;&gt;Service principal&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;infra-sim-live&quot;&gt;État normal : les deux contrôleurs de domaine sont disponibles.&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;infra-scene&quot;&gt;
       &lt;svg class=&quot;infra-wires&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; aria-labelledby=&quot;infra-ndadi-title infra-ndadi-description&quot;&gt;
@@ -2012,6 +2063,39 @@ html&gt;body{padding:0}&lt;/style&gt;
       draw();
       requestAnimationFrame(frame);
       if(document.fonts)document.fonts.ready.then(()=&gt;{if(root.isConnected &amp;&amp; !overview.hidden)draw();});
+    })();
+  &lt;/script&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const root = document.getElementById(&#x27;infra-ndadi-interactive&#x27;);
+      if (!root || root.dataset.simReady === &#x27;true&#x27;) return;
+      root.dataset.simReady = &#x27;true&#x27;;
+      root.dataset.simOutage = &#x27;false&#x27;;
+      const trigger = root.querySelector(&#x27;.infra-sim-trigger&#x27;);
+      const reset = root.querySelector(&#x27;.infra-sim-reset&#x27;);
+      const live = root.querySelector(&#x27;.infra-sim-live&#x27;);
+      const text = key =&gt; root.querySelector(`[data-sim=&quot;${key}&quot;] .infra-sim-text`);
+      const ad01 = text(&#x27;ad01&#x27;);
+      const ad02 = text(&#x27;ad02&#x27;);
+      const dns = text(&#x27;dns&#x27;);
+      const dhcp = text(&#x27;dhcp&#x27;);
+      if (!trigger || !reset || !live || !ad01 || !ad02 || !dns || !dhcp) return;
+
+      function setOutage(active) {
+        root.dataset.simOutage = String(active);
+        trigger.dataset.active = String(active);
+        trigger.textContent = active ? &#x27;Panne simulée · SRV-AD01 HS&#x27; : &#x27;Simuler la panne SRV-AD01&#x27;;
+        ad01.textContent = active ? &#x27;Hors service&#x27; : &#x27;Actif · AD / DNS / DHCP&#x27;;
+        ad02.textContent = active ? &#x27;SECOURS ACTIF · AD / DNS&#x27; : &#x27;Disponible en secours&#x27;;
+        dns.textContent = active ? &#x27;Disponible via SRV-AD02&#x27; : &#x27;Disponible&#x27;;
+        dhcp.textContent = active ? &#x27;DHCP Failover actif&#x27; : &#x27;Service principal&#x27;;
+        live.textContent = active
+          ? &#x27;Continuité de service assurée : SRV-AD02 prend le relais pour l’annuaire, le DNS et le DHCP Failover.&#x27;
+          : &#x27;État normal : les deux contrôleurs de domaine sont disponibles.&#x27;;
+      }
+      trigger.addEventListener(&#x27;click&#x27;, () =&gt; setOutage(true));
+      reset.addEventListener(&#x27;click&#x27;, () =&gt; setOutage(false));
     })();
   &lt;/script&gt;
 &lt;/div&gt;
